@@ -2,7 +2,7 @@
 use yii\helpers\Html;
 use yii\bootstrap\Tabs;
 
-$selected_value = $widget->model->getAttribute($widget->attribute);
+$selected_value = $widget->model->{$widget->attribute};
 
 foreach ($widget->items as $key => $value) {
 	$tabs[] = [
