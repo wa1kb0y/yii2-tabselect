@@ -1,6 +1,6 @@
 {
-    "name": "walkboy/yii2-filterform",
-    "description": "Yii2 form style filter",
+    "name": "walkboy/yii2-tabselect",
+    "description": "Yii2 tab styled select input",
     "version": "0.1",
     "type": "yii2-extension",
     "license": "MIT",
