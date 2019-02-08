@@ -30,7 +30,8 @@ echo Html::activeDropdownList($widget->model, $widget->attribute, $widget->items
 
 	<?= \yii\bootstrap4\Tabs::widget([
 		'id' => $widget->id,
-		'options' => ['class'=>'tab-select'],
+		'options' => $widget->tabsOptions,
+		'navType' => $widget->navType,
 		'items' => $tabs,
 	]) ?>
 
@@ -38,7 +39,8 @@ echo Html::activeDropdownList($widget->model, $widget->attribute, $widget->items
 
 	<?= \yii\bootstrap\Tabs::widget([
 		'id' => $widget->id,
-		'options' => ['class'=>'tab-select'],
+		'options' => $widget->tabsOptions,
+		'navType' => $widget->navType,
 		'items' => $tabs,
 	]) ?>
 

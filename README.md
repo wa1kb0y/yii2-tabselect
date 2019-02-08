@@ -16,6 +16,9 @@ use walkboy\TabSelect\TabSelect;
     	0 => 'Tab 1', 
     	1 => 'Tab 2',
     ],
+    //'showSelect' => false,
+    //'navType' => 'nav-pills',
+    //'tabsOptions' => [],
 ])->label(false) ?>
 ```
 
