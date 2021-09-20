@@ -2,6 +2,7 @@
 use yii\helpers\Html;
 
 $selected_value = $widget->model->{$widget->attribute};
+$tabs = [];
 
 foreach ($widget->items as $key => $value) {
 	$tabs[] = [
