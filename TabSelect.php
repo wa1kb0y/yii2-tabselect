@@ -12,6 +12,7 @@ class TabSelect extends \yii\widgets\InputWidget
     public $tabsOptions = [];
     public $navType = 'nav-tabs';
     public $bsVersion;
+    public $encodeLabels = true;
 
     public function init()
     {
