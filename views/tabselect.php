@@ -34,6 +34,7 @@ echo Html::activeDropdownList($widget->model, $widget->attribute, $widget->items
 		'options' => $widget->tabsOptions,
 		'navType' => $widget->navType,
 		'items' => $tabs,
+		'encodeLabels' => $widget->encodeLabels,
 	]) ?>
 
 <?php else: ?>
@@ -43,6 +44,7 @@ echo Html::activeDropdownList($widget->model, $widget->attribute, $widget->items
 		'options' => $widget->tabsOptions,
 		'navType' => $widget->navType,
 		'items' => $tabs,
+		'encodeLabels' => $widget->encodeLabels,
 	]) ?>
 
 <?php endif; ?>
