@@ -3,7 +3,6 @@ namespace walkboy\TabSelect;
 
 use yii;
 use yii\helpers\ArrayHelper;
-use walkboy\TabSelect\TabSelectAsset;
 
 class TabSelect extends \yii\widgets\InputWidget
 {

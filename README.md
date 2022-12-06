@@ -5,7 +5,7 @@ This is Yii 2 widget working as dropdown but looking like tabs.
 Add `"walkboy/yii2-tabselect": "dev-master"` to composer.json and run `composer update`
 
 # Config
-Add `bsVersion => '4.x'` to your `params.php` to use Bootstrap 4 globally or set it on widget settings.
+Add `bsVersion => '4.x'` or `'5'` to your `params.php` to use related Bootstrap plugins globally or set it on widget settings.
 
 # Usage
 ```

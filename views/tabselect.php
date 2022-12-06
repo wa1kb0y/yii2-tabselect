@@ -1,5 +1,9 @@
 <?php
+
+use walkboy\TabSelect\TabSelect;
 use yii\helpers\Html;
+
+/** @var TabSelect $widget */
 
 $selected_value = $widget->model->{$widget->attribute};
 
@@ -20,7 +24,22 @@ echo Html::activeDropdownList($widget->model, $widget->attribute, $widget->items
 ])
 ?>
 
-<?php if ($widget->bsVersion == '4'): ?>
+<?php if ($widget->bsVersion == '5'): ?>
+
+	<?php
+	if (!class_exists("yii\\bootstrap5\\Html")) {
+		throw new InvalidConfigException("You must install 'yiisoft/yii2-bootstrap5' extension for Bootstrap 5");
+	}
+	?>
+
+	<?= \yii\bootstrap5\Tabs::widget([
+		'id' => $widget->id,
+		'options' => $widget->tabsOptions,
+		'navType' => $widget->navType,
+		'items' => $tabs,
+	]) ?>
+
+<?php elseif ($widget->bsVersion == '4'): ?>
 
 	<?php
 	if (!class_exists("yii\\bootstrap4\\Html")) {
