@@ -6,6 +6,7 @@ use yii\helpers\Html;
 /** @var TabSelect $widget */
 
 $selected_value = $widget->model->{$widget->attribute};
+$tabs = [];
 
 foreach ($widget->items as $key => $value) {
 	$tabs[] = [
@@ -52,6 +53,7 @@ echo Html::activeDropdownList($widget->model, $widget->attribute, $widget->items
 		'options' => $widget->tabsOptions,
 		'navType' => $widget->navType,
 		'items' => $tabs,
+		'encodeLabels' => $widget->encodeLabels,
 	]) ?>
 
 <?php else: ?>
@@ -61,6 +63,7 @@ echo Html::activeDropdownList($widget->model, $widget->attribute, $widget->items
 		'options' => $widget->tabsOptions,
 		'navType' => $widget->navType,
 		'items' => $tabs,
+		'encodeLabels' => $widget->encodeLabels,
 	]) ?>
 
 <?php endif; ?>
