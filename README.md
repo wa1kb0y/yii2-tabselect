@@ -16,9 +16,12 @@ use walkboy\TabSelect\TabSelect;
     	0 => 'Tab 1', 
     	1 => 'Tab 2',
     ],
-    //'showSelect' => false,
-    //'navType' => 'nav-pills',
-    //'tabsOptions' => [],
+    // 'showSelect' => false,
+    // 'showFilter' => false,
+    // 'navType' => 'nav-tabs',
+    // 'navType' => 'nav-pills flex-column', // vertical style
+    // 'tabsOptions' => [],
+    // 'filterInputOptions' => [],
 ])->label(false) ?>
 ```
 
@@ -28,16 +31,16 @@ use walkboy\FilterForm\FilterForm;
 use walkboy\TabSelect\TabSelect;
 
 <?php
-$form = FilterForm::begin(['options'=>['class'=>'filter-form']]);
+$form = FilterForm::begin(['options' => ['class' => 'filter-form']]);
 
 echo $form->field($searchModel, 'number')->widget(TabSelect::classname(), [
     'items' => ArrayHelper::map(
 		Order::find()
-			->select(['created_at'=>'year(created)'])
+			->select(['created_at' => 'year(created)'])
 			->distinct()
 		    ->all(), 
 		'created', 'created'),
-	\\'bsVersion' => '4',
+	\\ 'bsVersion' => '4',
 ])->label(false);
 
 FilterForm::end();

@@ -10,7 +10,7 @@ $tabs = [];
 
 foreach ($widget->items as $key => $value) {
 	$tabs[] = [
-		'label' => $value, 
+		'label' => $value,
 		'linkOptions' => [
 			'data-id' => $key
 		],
@@ -24,6 +24,10 @@ echo Html::activeDropdownList($widget->model, $widget->attribute, $widget->items
 	'class' => 'form-control',
 ])
 ?>
+
+<?php if ($widget->showFilter): ?>
+	<?= Html::textInput($widget->id.'_filter', '', $widget->filterInputOptions) ?>
+<?php endif; ?>
 
 <?php if ($widget->bsVersion == '5'): ?>
 
